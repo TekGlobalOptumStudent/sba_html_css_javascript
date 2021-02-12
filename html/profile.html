@@ -25,13 +25,8 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- <a class="navbar-brand" href="#">Home</a> -->
-        <form class="navbar-brand" action="home.html">
-            <!-- 
-            <label for="user">Enter a username</label><br>
-            <input type="text" id="user" name="user" placeholder="username"><br>
-            <label for="pass">Enter a password</label><br>
-            <input type="text" id="pass" name="pass" placeholder="password"><br><br>
-            -->
+        <form class="navbar-brand" id="login_form" action="home.html">
+            <input type="hidden" id="user" name="user" value="">
             <input type="submit" class="navbar-brand" value="Home">
         </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -71,8 +66,15 @@
         <div class="center_box">
             <div class="profile_box">
                 <!-- TODO: hash username and return image based on value -->
+                <div>
+                    <h1>
+                        <script>
+                            document.write(get_user_from_url());
+                        </script>
+                    </h1>
+                </div>
                 <div class="profile_pic_box">
-                    <img src="">
+                    <img id="profile_pic" src="" />
                 </div>
                 <div class="random_details_box">
                     <p>

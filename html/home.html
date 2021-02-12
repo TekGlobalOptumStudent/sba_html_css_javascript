@@ -24,7 +24,7 @@
 
 	<!-- Navigation Bar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Home</a>
+		<a class="navbar-brand" href="home.html">Home</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -58,11 +58,35 @@
 </head>
 
 <body>
-	<div class="main_container">
+	<div class="main_container" id="main_container">
 		<div class="center_box">
-
+			<script>
+				populate_home();
+			</script>
 		</div>
+		<script>
+			check_if_logged_in();
+		</script>
+		<!-- 
+		<div class="profile_mini">
+			<div>
+				<img src="">
+			</div>
+			<div>
+				<h1>
+					<script>
+						var user_name = get_user_from_url();
+						document.write(user_name);
+					</script>
+				</h1>
+			</div>
+		</div>
+		-->
 	</div>
+
+	<form id="login_form" action="home.html">
+		<input type="hidden" id="user" name="user" value="">
+	</form>
 </body>
 
 </html>

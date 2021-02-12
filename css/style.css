@@ -1,5 +1,6 @@
+/* global classes */
 .main_container{
-    width: 80%;
+    width: 65%;
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -14,6 +15,17 @@
     background-color: white;
 }
 
+/* home */
+.profile_mini{
+    position: fixed;
+    top: 10%;
+    left: 82.5%;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: grey;
+}
+
+/* signup */
 .form_box{
     width: 50%;
     height: 50%;
@@ -32,6 +44,7 @@
     padding: 0 auto;
 }
 
+/* profile */
 .profile_box{
     width: 80%;
     height: 80%;
