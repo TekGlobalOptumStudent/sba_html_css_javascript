@@ -60,28 +60,15 @@
 <body>
 	<div class="main_container" id="main_container">
 		<div class="center_box">
-			<script>
-				populate_home();
-			</script>
+			<div class="content_list" id="content_list">
+				<script>
+					populate_home();
+				</script>
+			</div>
 		</div>
 		<script>
 			check_if_logged_in();
 		</script>
-		<!-- 
-		<div class="profile_mini">
-			<div>
-				<img src="">
-			</div>
-			<div>
-				<h1>
-					<script>
-						var user_name = get_user_from_url();
-						document.write(user_name);
-					</script>
-				</h1>
-			</div>
-		</div>
-		-->
 	</div>
 
 	<form id="login_form" action="home.html">
