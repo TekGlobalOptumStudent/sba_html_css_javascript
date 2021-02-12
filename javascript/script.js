@@ -40,8 +40,13 @@ function get_random_lorem(){
     var start = Math.min(random_num1, random_num2);
     var end = Math.max(random_num1, random_num2);
     var ret = lorem_ipsum_array[start];
+    var limit = 0;
     for(var i = start + 1; i < end; i++){
         ret += (" " + lorem_ipsum_array[i]);
+        if(limit == 10){
+            break;
+        }
+        limit++;
     }
     return ret;
 }
@@ -56,15 +61,15 @@ function create_new_post(){
     poster_picture.src = hash_user_name_into_pic(user);
     var poster_name = document.createElement("H5");
     var post_container = document.createElement("DIV");
-    post_container.style = "max-height: 40px"
-    var post = document.createElement("P");
+    var post = document.createElement("DIV");
+    post.style = "max-height: 40px, overflow: hidden, text-overflow: ellipsis"
     post_box.appendChild(top_box);
     top_box.appendChild(poster_picture);
     top_box.appendChild(poster_name);
     poster_name.innerText = user;
     post_box.appendChild(post_container);
     post_container.appendChild(post);
-    post_container.innerText = get_random_lorem();
+    post.innerText = get_random_lorem();
     return post_box;
 }
 
@@ -101,4 +106,20 @@ function check_if_logged_in(){
     if(document.URL.search(/user/g) > 0){
         generate_profile_mini();
     }
+}
+
+function create_random_stats(){
+    return Math.floor(Math.random() * 100);
+}
+
+function change_colors1(){
+    document.getElementById("main_container").style.backgroundColor = "black";
+}
+
+function change_colors2(){
+    document.getElementById("main_container").style.backgroundColor = "red";
+}
+
+function change_colors3(){
+    document.getElementById("main_container").style.backgroundColor = "blue";
 }

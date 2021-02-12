@@ -1,4 +1,8 @@
 /* global classes */
+html{
+    font: "Times New Roman", Times, serif;
+}
+
 .main_container{
     width: 65%;
     height: 100%;
@@ -24,11 +28,13 @@
     background-color: grey;
 }
 .content_list{
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
+    overflow: auto;
 }
 
 /* signup */

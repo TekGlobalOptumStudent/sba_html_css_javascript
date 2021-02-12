@@ -27,53 +27,41 @@
             height: 80%;
             margin: 0 auto;
             padding: 0 auto;
+            float: center;
         }
     </style>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- <a class="navbar-brand" href="#">Home</a> -->
-        <form class="navbar-brand" id="login_form" action="home.html">
-            <input type="hidden" id="user" name="user" value="">
-            <input type="submit" class="navbar-brand" value="Home">
-        </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Theme
-                        <!-- TODO: change name with javascript -->
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <!-- <div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Theme 1</a>
-						<a class="dropdown-item" href="#">Theme 2</a>
-						<a class="dropdown-item" href="#">Theme 3</a> -->
-                        <option class="dropdown-item" value=0>1</option>
-                        <option class="dropdown-item" value=1>2</option>
-                        <option class="dropdown-item" value=2>3</option>
-                        <option class="dropdown-item" value=3>4</option>
-                        <!-- TODO: make background change with javascript -->
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="home.html">Sign out</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="home.html">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Change Theme
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#" onclick="change_colors1()">1</a>
+					  <a class="dropdown-item" href="#" onclick="change_colors2()">2</a>
+					  <a class="dropdown-item" href="#" onclick="change_colors3()">3</a>
+					</div>
+				  </li>
+				<li class="nav-item">
+					<a class="nav-link" href="signup.html">Login</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </head>
 
 <body>
     <div class="main_container">
         <div class="center_box">
             <div class="profile_box">
-                <!-- TODO: hash username and return image based on value -->
                 <div>
                     <h1>
                         <script>
@@ -86,26 +74,32 @@
                 </div>
                 <div class="random_details_box">
                     <p>
-                        This is some test text that will change later in the future.
+                        <script>document.write(get_random_lorem());</script>
                     </p>
                 </div>
-                <!-- TODO: randomize with javascript on page load -->
                 <div class="random_stats_box">
                     <table>
                         <tr>
-                            <th>Some</th>
-                            <th>Random</th>
-                            <th>Stats</th>
+                            <th>Times Visited</th>
+                            <th>Posts Made</th>
+                            <th>Posts Liked</th>
                         </tr>
                         <tr>
-                            <td>0</td>
-                            <td>5</td>
-                            <td>100</td>
+                            <td><script>document.write(create_random_stats());</script></td>
+                            <td><script>document.write(create_random_stats());</script></td>
+                            <td><script>document.write(create_random_stats());</script></td>
                         </tr>
                         <tr>
-                            <td>50</td>
-                            <td>30</td>
-                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <th>Easter Eggs</th>
+                            <th>Max Followers</th>
+                            <th>Future Posts to Make</th>
+                        </tr>
+                        <tr>
+                            <td><script>document.write(create_random_stats());</script></td>
+                            <td><script>document.write(create_random_stats());</script></td>
+                            <td><script>document.write(create_random_stats());</script></td>
                         </tr>
                     </table>
                 </div>
