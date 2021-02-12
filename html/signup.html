@@ -60,13 +60,13 @@
 <body>
     <div class="main_container">
         <div class="center_box">
+            <div class="filler_box"></div>
             <div class="form_box">
                 <form class="login_form" id="login_form" action="profile.html">
-                    <!-- TODO: add regex pattern checking -->
-                    <label for="user">Enter a username</label><br>
-                    <input type="text" id="user" name="user" placeholder="username"><br>
-                    <label for="pass">Enter a password</label><br>
-                    <input type="text" id="pass" name="pass" placeholder="password"><br><br>
+                    <label for="user">Create a username using up to 10 letters and up to 4 digits</label><br>
+                    <input type="text" id="user" name="user" placeholder="username" pattern="[A-z]{1,10}\d{1,4}"><br>
+                    <label for="pass">Enter a password using 6 to 20 letters and number</label><br>
+                    <input type="text" id="pass" name="pass" placeholder="password" pattern="[a-zA-Z0-9]{6,20}"><br>
                     <input type="submit" value="Submit">
                 </form>
             </div>
