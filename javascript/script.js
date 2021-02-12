@@ -75,11 +75,17 @@ function populate_home(){
     }
 }
 
+function get_user_profile_pic(){
+    var username = get_user_from_url();
+    document.getElementById("profile_pic").src = hash_user_name_into_pic(username);
+}
+
 function generate_profile_mini(){
     var node = document.getElementById("main_container");
     var profile_mini = document.createElement("DIV");
     var profile_mini_image_container = document.createElement("DIV");
     var profile_mini_image = document.createElement("IMG");
+    profile_mini_image.id = "profile_pic";
     var profile_mini_name_container = document.createElement("DIV");
     var profile_mini_name = document.createElement("H1");
     node.appendChild(profile_mini);
