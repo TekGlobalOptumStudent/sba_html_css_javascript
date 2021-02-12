@@ -18,7 +18,7 @@ On the profile page, users again have the ability to return back to home, but wi
 
 ## Technical Specifications
 <p>
-The website currently does not operate with a backend, so the sign-up feature does not actually save user credentials. Instead, it relies on grabbing credentials posted to the URL and generates user content based on the user name. As such, there is also no password verification system put in place.
+The website currently does not operate with a backend, so the sign-up feature does not actually save user credentials. Instead, it relies on grabbing credentials posted to the URL and generates user content based on the user name. As such, there is also no password verification system put in place. These credentials are also passed on to the other web pages by disguising buttons as forms with hidden, pre-set variables.
 </p>
 <br>
 <p>
